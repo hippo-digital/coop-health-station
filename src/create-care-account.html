@@ -1,0 +1,101 @@
+---
+layout: default
+id: signin
+---
+<div class="wrap">
+    <div class="row">
+
+        <div class="no-js__new-registration all-8 xsmall-12 small-12 medium-8 large-8 xlarge-8 column">
+
+            <h1>Create a Co-op Health Care account</h1>
+
+            <form class="registration-form" novalidate="" data-parsley-ui-enabled="false" data-parsley-focus="none" method="post" data-track-submit="{&quot;type&quot;: &quot;action&quot;, &quot;label&quot;: &quot;Continue&quot;}" data-parsley-excluded="#member-mobile-number:hidden">
+                <fieldset class="fieldset">
+                    <input type="number" id="temporary-card-number" title="Temporary card number" value="" name="temporary-card-number" hidden="">
+
+                    <div class="form-row">
+                        <label for="member-title" style="margin: 0;">Title</label>
+                        <select id="member-title" name="member-title" data-parsley-required-message="Choose a title." required="">
+                            <option value="" selected="" disabled="">Please select</option>
+                            <option value="MR">Mr</option>
+                            <option value="MRS">Mrs</option>
+                            <option value="MISS">Miss</option>
+                            <option value="MS">Ms</option>
+                            <option value="MX">Mx</option>
+                            <option value="DR">Dr</option>
+                            <option value="PREFER_NOT_TO_SAY">Prefer not to say</option>
+                        </select>
+                    </div>
+
+                    <div class="form-row">
+                        <label for="member-first-name" style="margin: 0;">First name</label>
+                        <input type="text" id="member-first-name" title="First name" value="" name="member-first-name" maxlength="20" data-parsley-maxlength-message="The first name must be 20 characters or fewer" data-parsley-firstname="" data-parsley-required-message="Enter your first name." required="" autocomplete="given-name">
+                    </div>
+                    <div class="form-row">
+                        <label for="member-last-name" style="margin: 0;">Last name</label>
+                        <input type="text" id="member-last-name" title="Last name" value="" name="member-last-name" maxlength="30" data-parsley-maxlength-message="The last name must be 30 characters or fewer" data-parsley-lastname="" data-parsley-required-message="Enter your last name." required="" autocomplete="family-name">
+                    </div>
+
+                    <label for="member-day-of-birth" style="margin: 0;">Date of birth</label>
+                    <span id="dobHint" class="form-row--note">For example 31 / 05 / 1970</span>
+                    <p class="member-registration-error-message__member-year-of-birth-error errors__field-error-message--hidden"></p>
+                    <div class="form-row">
+                        <div class="date-fields">
+                            <label for="member-day-of-birth" class="label-inline">Day</label>
+                            <label for="member-month-of-birth" class="label-inline">Month</label>
+                            <label for="member-year-of-birth" class="label-inline">Year</label>
+                        </div>
+                        <div class="date-fields">
+                            <input type="number" id="member-day-of-birth" title="Day" name="member-day-of-birth" value="" min="1" class="input-inline date-of-birth date-day">
+                            <input type="number" id="member-month-of-birth" title="Month" name="member-month-of-birth" value="" min="1" class="input-inline date-of-birth date-month">
+                            <input type="number" id="member-year-of-birth" title="Year" name="member-year-of-birth" aria-describedby="dobHint" class="input-inline date-of-birth date-year" value="" maxlength="4" min="1900" data-parsley-min-message="Check you’ve entered the correct date of birth." required="" data-parsley-required-message="Enter your full date of birth." data-parsley-dateofbirth="" data-parsley-age="">
+                        </div>
+                    </div>
+
+
+                    <div class="form-row">
+                        <label for="member-email" style="margin: 0;">Email</label>
+                        <input type="email" id="member-email" title="Email address" value="" name="member-email" data-parsley-required-message="Enter your email address." data-parsley-type-message="Check your email is correct - it must be a valid email address." required="" autocomplete="email">
+                    </div>
+                    <div class="form-row">
+                        <label for="member-confirm-email"  style="margin: 0;">Confirm email</label>
+                        <input type="email" id="member-confirm-email" title="Confirm email" name="member-confirm-email" value="" data-parsley-required-message="Confirm your email address." data-parsley-type-message="Confirm your email address." data-parsley-equalto="#member-email" data-parsley-equalto-message="Check your email confirmation - it must match your email." required="" autocomplete="email">
+                    </div>
+                    <div class="form-row">
+                        <label for="member-password"  style="margin: 0;">Create password</label>
+                        <span id="pwdHint" class="form-row--note">Your password must be at least 8 characters long, and include uppercase, lowercase and numbers</span>
+                        <p class="member-registration-error-message__member-password-error errors__field-error-message--hidden"></p>
+                        <input id="member-password" name="member-password" title="Password" type="password" aria-describedby="pwdHint" data-parsley-minlength="8" data-parsley-minlength-message="Choose a different password - it must be at least 8 characters, and including a mix of numbers and upper and lower case letters." data-parsley-password="" data-parsley-required-message="Create your password." required="">
+                    </div>
+                    <div class="form-row">
+                        <label for="member-confirm-password" style="margin: 0;">Confirm password</label>
+                        <input type="password" id="member-confirm-password" name="member-confirm-password" data-parsley-password="" data-parsley-required-message="Confirm your password." data-parsley-equalto="#member-password" data-parsley-equalto-message="Check your password confirmation - it must match your password." required="">
+                    </div>
+
+
+                    <div class="form-row no-margin" id="terms-agreement">
+                        <p class="no-margin">
+                            By applying to become a member, I am agreeing to the
+                            <a href="https://www.coop.co.uk/terms/membership-terms-and-conditions/" id="terms-and-conditions" target="_blank" rel="noopener noreferrer" data-track-click="{&quot;type&quot;: &quot;click&quot;, &quot;label&quot;: &quot;Terms and conditions&quot;}">terms
+                                and conditions</a>
+                            <sup class="icon icon-open-new-tab"></sup>
+                            and
+                            <a href="https://www.coop.co.uk/terms/privacy-policy/" id="privacy-policy" target="_blank" rel="noopener noreferrer" data-track-click="{&quot;type&quot;: &quot;click&quot;, &quot;label&quot;: &quot;Privacy policy&quot;}">
+                                privacy policy</a>
+                            <sup class="icon icon-open-new-tab"></sup>.
+                            I am committed to the Society remaining a co‑operative and I support
+                            <a href="https://www.co-operative.coop/about-us/values" target="_blank" rel="noopener noreferrer" data-track-click="{&quot;type&quot;: &quot;click&quot;, &quot;label&quot;: &quot;Co-op values and principles&quot;}">
+                                Co‑op values and principles</a>
+                            <sup class="icon icon-open-new-tab"></sup>.
+                        </p>
+                    </div>
+
+                    <a href="create-care-account-email.html" type="submit" id="register-button" aria-controls="errors-summary-aria" class="btn btn-primary create-account btn-spaced" data-track-click="{&quot;type&quot;: &quot;action&quot;, &quot;label&quot;: &quot;Continue&quot;}">
+                        Continue
+                    </a>
+                </fieldset>
+            </form>
+        </div>
+
+    </div>
+</div>

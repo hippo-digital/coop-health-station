@@ -8,26 +8,26 @@ id: save-results
             <h1>Accessing Co-op Health Care</h1>
         </div>
         <div class="column medium-7">
-            <form action="signin.html" method="post">
+            <form action="">
 
                 <fieldset class="form-row">
                     <legend>How would you like to access your health information? </legend>
                     <div class="input input-tap">
-                        <label class="block-label"><input type="radio" name="account" value="member"> Sign up using my existing Co-op membership account</label>
+                        <label class="block-label"><input type="radio" name="radio-inline-group" value="signin.html"> Sign up using my existing Co-op membership account</label>
 
-                        <label class="block-label"><input type="radio" name="account" value="new"> Sign up with a <span style="border-bottom: 1px solid black;">new</span> Co-op membership account
+                        <label class="block-label"><input type="radio" name="radio-inline-group" value="create-member.html"> Sign up with a <span style="border-bottom: 1px solid black;">new</span> Co-op membership account
 
                             <p style="clear: both; font-size: 12pt; opacity: .75; margin:0.75em 0 0;">For new membership accounts, you will be required to become a member of the Co-op and buy a £1 share.</p></label>
 
 
-                        <label class="block-label"><input type="radio" name="account" value="care"> Create a Co-op Health Care account
+                        <label class="block-label"><input type="radio" name="radio-inline-group" value="create-care-account.html"> Create a Co-op Health Care account
                             <p style="clear: both; font-size: 12pt; opacity: .75; margin:0.75em 0 0;">Doesn't require membership of the Co-op</p></label>
 
                     </div>
                 </fieldset>
 
                 <div class="form-row">
-                    <button class="btn btn-primary" type="submit">Continue</button>
+                    <a class="btn btn-primary" type="submit" id="continue">Continue</a>
                 </div>
             </form>
         </div>

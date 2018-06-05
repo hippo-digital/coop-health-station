@@ -1,0 +1,476 @@
+---
+layout: default
+id: signin
+---
+<div class="wrap">
+    <div class="row">
+
+        <div class="no-js__new-registration all-8 xsmall-12 small-12 medium-8 large-8 xlarge-8 column">
+
+            <h1>Join Co‑op for £1</h1>
+
+            <p>You pay £1 to become a member. This buys you a share in Co-op, which gives you:</p>
+            <ul>
+                <li>5% back to spend next time when you buy Co-op products</li>
+                <li>a share in our profits if we do well</li>
+                <li>the right to vote on how we do business</li>
+            </ul>
+
+
+
+            <form class="registration-form" novalidate="" data-parsley-ui-enabled="false" data-parsley-focus="none" method="post" data-track-submit="{&quot;type&quot;: &quot;action&quot;, &quot;label&quot;: &quot;Continue&quot;}" data-parsley-excluded="#member-mobile-number:hidden">
+                <fieldset class="fieldset">
+                    <input type="number" id="temporary-card-number" title="Temporary card number" value="" name="temporary-card-number" hidden="">
+
+                    <div class="form-row">
+                        <label for="member-title" style="margin: 0;">Title</label>
+                        <select id="member-title" name="member-title" data-parsley-required-message="Choose a title." required="">
+                            <option value="" selected="" disabled="">Please select</option>
+                            <option value="MR">Mr</option>
+                            <option value="MRS">Mrs</option>
+                            <option value="MISS">Miss</option>
+                            <option value="MS">Ms</option>
+                            <option value="MX">Mx</option>
+                            <option value="DR">Dr</option>
+                            <option value="PREFER_NOT_TO_SAY">Prefer not to say</option>
+                        </select>
+                    </div>
+
+                    <div class="form-row">
+                        <label for="member-first-name" style="margin: 0;">First name</label>
+                        <input type="text" id="member-first-name" title="First name" value="" name="member-first-name" maxlength="20" data-parsley-maxlength-message="The first name must be 20 characters or fewer" data-parsley-firstname="" data-parsley-required-message="Enter your first name." required="" autocomplete="given-name">
+                    </div>
+                    <div class="form-row">
+                        <label for="member-last-name" style="margin: 0;">Last name</label>
+                        <input type="text" id="member-last-name" title="Last name" value="" name="member-last-name" maxlength="30" data-parsley-maxlength-message="The last name must be 30 characters or fewer" data-parsley-lastname="" data-parsley-required-message="Enter your last name." required="" autocomplete="family-name">
+                    </div>
+
+                    <label for="member-day-of-birth" style="margin: 0;">Date of birth</label>
+                    <span id="dobHint" class="form-row--note">For example 31 / 05 / 1970</span>
+                    <p class="member-registration-error-message__member-year-of-birth-error errors__field-error-message--hidden"></p>
+                    <div class="form-row">
+                        <div class="date-fields">
+                            <label for="member-day-of-birth" class="label-inline">Day</label>
+                            <label for="member-month-of-birth" class="label-inline">Month</label>
+                            <label for="member-year-of-birth" class="label-inline">Year</label>
+                        </div>
+                        <div class="date-fields">
+                            <input type="number" id="member-day-of-birth" title="Day" name="member-day-of-birth" value="" min="1" class="input-inline date-of-birth date-day">
+                            <input type="number" id="member-month-of-birth" title="Month" name="member-month-of-birth" value="" min="1" class="input-inline date-of-birth date-month">
+                            <input type="number" id="member-year-of-birth" title="Year" name="member-year-of-birth" aria-describedby="dobHint" class="input-inline date-of-birth date-year" value="" maxlength="4" min="1900" data-parsley-min-message="Check you’ve entered the correct date of birth." required="" data-parsley-required-message="Enter your full date of birth." data-parsley-dateofbirth="" data-parsley-age="">
+                        </div>
+                    </div>
+
+
+                    <div id="postcode-lookup">
+                        <div id="postcode-search" class="js-only" data-show-postcode-search="true" aria-hidden="false" aria-expanded="false">
+                            <p id="postcode-invalid-error" class="errors__field-error-message hide">Check your postcode and try again or enter your address manually.</p>
+
+                            <div class="postcode-search-form">
+                                <div class="form-row current-results-wrap" id="postcode-search-results" hidden="" style="display: none;">
+                                    <label class="current-title">Search results for postcode</label>
+                                    <div id="postcode-search-results-placeholder"></div>
+                                </div>
+                                <div class="postcode-search-form">
+                                    <div class="form-row current-results-wrap" id="postcode-search-results" hidden="">
+                                        <label class="current-title">Search results for postcode</label>
+                                        <div id="postcode-search-results-placeholder"></div>
+                                    </div>
+                                    <div class="form-row">
+
+                                        <label for="postcode" class="postcode-title"  style="margin: 0;">Postcode</label>
+                                        <div class="row">
+                                            <div class="membership__postcode-lookup-component-column">
+                                                <div class="form-group">
+                                                    <input type="text" name="postcode" id="postcode" class="find-address-input" value="" required="" data-parsley-excluded="true" data-parsley-trigger="change" data-parsley-pattern="^([Gg][Ii][Rr] 0[Aa]{2})|((([A-Za-z][0-9]{1,2})|(([A-Za-z][A-Ha-hJ-Yj-y][0-9]{1,2})|(([A-Za-z][0-9][A-Za-z])|([A-Za-z][A-Ha-hJ-Yj-y][0-9]?[A-Za-z])))) ?[0-9][A-Za-z]{2})$" data-parsley-required-message="Enter your postcode." data-parsley-pattern-message="Enter a valid postcode." autocomplete="postal-code">
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <div class="form-group">
+                                                    <button type="button" id="find-address-current" class="btn-primary-dark btn-medium find-address-button" data-track-click="{&quot;type&quot;: &quot;action&quot;, &quot;label&quot;: &quot;Find address&quot;}">
+                                                        Find address
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+
+
+                                        <div class="row">
+                                            <div class="large-6 xsmall-12 column">
+                                                <p class="no-postcode-link">
+                                                    <a href="" role="button" id="enter-address-manually" data-track-click="{&quot;type&quot;: &quot;click&quot;, &quot;label&quot;: &quot;Enter address manually&quot;}">
+                                                        Enter address manually
+                                                    </a>
+                                                </p>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="manual-address-entry" style="display: none;">
+                            <p id="postcode-search-error" class="errors__field-error-message hide">Postcode not found, enter your address manually.</p>
+
+                            <div class="form-row">
+                                <label for="member-address-line-1">Address line 1</label>
+                                <p class="member-registration-error-message__member-address-line-1-error errors__field-error-message--hidden"></p>
+                                <input type="text" id="member-address-line-1" value="" data-set-dirty="dirty-address" data-parsley-error-message="Enter the first line of your address." data-parsley-required-message="Enter the first line of your address." name="member-address-line-1" data-parsley-trigger="change" required="" autocomplete="address-line1">
+                                <input type="hidden" name="member-address-lookup-line-one" id="member-address-lookup-line-one" value="">
+                            </div>
+
+
+                            <div class="form-row">
+                                <label for="member-address-line-2">Address line 2 (optional)</label>
+                                <input type="text" id="member-address-line-2" data-parsley-error-message="Enter your last name." data-parsley-required-message="Enter your last name." value="" data-set-dirty="dirty-address" name="member-address-line-2" autocomplete="address-line2">
+                                <input type="hidden" name="member-address-lookup-line-two" id="member-address-lookup-line-two" value="">
+                            </div>
+                            <div class="form-row">
+                                <label for="member-address-city">City / Town</label>
+                                <p class="member-registration-error-message__member-address-city-error errors__field-error-message--hidden"></p>
+                                <input type="text" id="member-address-city" value="" data-set-dirty="dirty-address" data-parsley-error-message="Enter your city or town." data-parsley-required-message="Enter your city or town." name="member-address-city" data-parsley-trigger="change" required="" autocomplete="address-level2">
+                                <input type="hidden" name="member-address-lookup-city" id="member-address-lookup-city" value="">
+                            </div>
+
+
+                            <div class="form-row">
+                                <label for="member-address-postcode">Postcode</label>
+                                <p class="member-registration-error-message__member-address-postcode-error errors__field-error-message--hidden"></p>
+                                <input type="text" id="member-address-postcode" value="" data-set-dirty="dirty-address" name="member-address-postcode" data-parsley-required-message="Enter your postcode." data-parsley-pattern="^([Gg][Ii][Rr] 0[Aa]{2})|((([A-Za-z][0-9]{1,2})|(([A-Za-z][A-Ha-hJ-Yj-y][0-9]{1,2})|(([A-Za-z][0-9][A-Za-z])|([A-Za-z][A-Ha-hJ-Yj-y][0-9]?[A-Za-z])))) ?[0-9][A-Za-z]{2})$" data-parsley-pattern-message="Enter a valid postcode." required="" autocomplete="shipping postal-code">
+                                <input type="hidden" name="member-address-lookup-postcode" id="member-address-lookup-postcode" value="">
+                            </div>
+
+                            <div class="form-row">
+                                <label for="member-address-country">Country</label>
+                                <p class="member-registration-error-message__member-address-country-error errors__field-error-message--hidden"></p>
+                                <select id="member-address-country" name="member-address-country" data-set-dirty="dirty-address" class="member-address-country">
+                                    <option value="Afghanistan">Afghanistan</option>
+                                    <option value="Aland Islands">Aland Islands</option>
+                                    <option value="Albania">Albania</option>
+                                    <option value="Algeria">Algeria</option>
+                                    <option value="American Samoa">American Samoa</option>
+                                    <option value="Andorra">Andorra</option>
+                                    <option value="Angola">Angola</option>
+                                    <option value="Anguilla">Anguilla</option>
+                                    <option value="Antarctica">Antarctica</option>
+                                    <option value="Antigua and Barbuda">Antigua and Barbuda</option>
+                                    <option value="Argentina">Argentina</option>
+                                    <option value="Armenia">Armenia</option>
+                                    <option value="Aruba">Aruba</option>
+                                    <option value="Australia">Australia</option>
+                                    <option value="Austria">Austria</option>
+                                    <option value="Azerbaijan">Azerbaijan</option>
+                                    <option value="Bahamas">Bahamas</option>
+                                    <option value="Bahrain">Bahrain</option>
+                                    <option value="Bangladesh">Bangladesh</option>
+                                    <option value="Barbados">Barbados</option>
+                                    <option value="Belarus">Belarus</option>
+                                    <option value="Belgium">Belgium</option>
+                                    <option value="Belize">Belize</option>
+                                    <option value="Benin">Benin</option>
+                                    <option value="Bermuda">Bermuda</option>
+                                    <option value="Bhutan">Bhutan</option>
+                                    <option value="Bolivia">Bolivia</option>
+                                    <option value="Bonaire, St Eusta and Saba">Bonaire, St Eusta and Saba</option>
+                                    <option value="Bouvet Island">Bouvet Island</option>
+                                    <option value="Brazil">Brazil</option>
+                                    <option value="British Antarctic Territory">British Antarctic Territory</option>
+                                    <option value="British Indian Ocean Territory">British Indian Ocean Territory</option>
+                                    <option value="Brunei Darussalam">Brunei Darussalam</option>
+                                    <option value="Bulgaria">Bulgaria</option>
+                                    <option value="Burkina Faso">Burkina Faso</option>
+                                    <option value="Burundi">Burundi</option>
+                                    <option value="Cape Verde">Cape Verde</option>
+                                    <option value="Cambodia">Cambodia</option>
+                                    <option value="Cameroon">Cameroon</option>
+                                    <option value="Canada">Canada</option>
+                                    <option value="Canton and Enderbury Islands">Canton and Enderbury Islands</option>
+                                    <option value="Cayman Islands">Cayman Islands</option>
+                                    <option value="Central African Republic">Central African Republic</option>
+                                    <option value="Chad">Chad</option>
+                                    <option value="Chile">Chile</option>
+                                    <option value="China">China</option>
+                                    <option value="Christmas Island">Christmas Island</option>
+                                    <option value="Cosos Keeling Islands">Cosos Keeling Islands</option>
+                                    <option value="Colombia">Colombia</option>
+                                    <option value="Comoros">Comoros</option>
+                                    <option value="Congo">Congo</option>
+                                    <option value="Cook Islands">Cook Islands</option>
+                                    <option value="Costa Rica">Costa Rica</option>
+                                    <option value="Cote d'Ivoire">Cote d'Ivoire</option>
+                                    <option value="Croatia">Croatia</option>
+                                    <option value="Cuba">Cuba</option>
+                                    <option value="Curacao">Curacao</option>
+                                    <option value="Cyprus">Cyprus</option>
+                                    <option value="Czech Republic">Czech Republic</option>
+                                    <option value="Denmark">Denmark</option>
+                                    <option value="Djibouti">Djibouti</option>
+                                    <option value="Dominica">Dominica</option>
+                                    <option value="Dominican Republic">Dominican Republic</option>
+                                    <option value="Dronning Maud Land">Dronning Maud Land</option>
+                                    <option value="Ecuador">Ecuador</option>
+                                    <option value="Egypt">Egypt</option>
+                                    <option value="El Salvador">El Salvador</option>
+                                    <option value="Equatorial Guinea">Equatorial Guinea</option>
+                                    <option value="Eritrea">Eritrea</option>
+                                    <option value="Estonia">Estonia</option>
+                                    <option value="Ethiopia">Ethiopia</option>
+                                    <option value="Falkland Islands">Falkland Islands</option>
+                                    <option value="Faroe Islands">Faroe Islands</option>
+                                    <option value="Fiji">Fiji</option>
+                                    <option value="Finland">Finland</option>
+                                    <option value="France">France</option>
+                                    <option value="France, Metropolitan">France, Metropolitan</option>
+                                    <option value="French Guiana">French Guiana</option>
+                                    <option value="French Polynesia">French Polynesia</option>
+                                    <option value="French Southern and Antarctic Territories">French Southern and Antarctic Territories</option>
+                                    <option value="French Southern Territories">French Southern Territories</option>
+                                    <option value="Gabon">Gabon</option>
+                                    <option value="Gambia">Gambia</option>
+                                    <option value="Georgia">Georgia</option>
+                                    <option value="Germany">Germany</option>
+                                    <option value="Ghana">Ghana</option>
+                                    <option value="Gibraltar">Gibraltar</option>
+                                    <option value="Greece">Greece</option>
+                                    <option value="Greenland">Greenland</option>
+                                    <option value="Grenada">Grenada</option>
+                                    <option value="Guadeloupe">Guadeloupe</option>
+                                    <option value="Guam">Guam</option>
+                                    <option value="Guatemala">Guatemala</option>
+                                    <option value="Guernsey">Guernsey</option>
+                                    <option value="Guinea">Guinea</option>
+                                    <option value="Guinea-Bissau">Guinea-Bissau</option>
+                                    <option value="Guyana">Guyana</option>
+                                    <option value="Haiti">Haiti</option>
+                                    <option value="Heard Island and McDonald Islands">Heard Island and McDonald Islands</option>
+                                    <option value="Holy See Vatican City State">Holy See Vatican City State</option>
+                                    <option value="Honduras">Honduras</option>
+                                    <option value="Hong Kong">Hong Kong</option>
+                                    <option value="Hungary">Hungary</option>
+                                    <option value="Iceland">Iceland</option>
+                                    <option value="India">India</option>
+                                    <option value="Indonesia">Indonesia</option>
+                                    <option value="Iran">Iran</option>
+                                    <option value="Iraq">Iraq</option>
+                                    <option value="Ireland">Ireland</option>
+                                    <option value="Isle of Man">Isle of Man</option>
+                                    <option value="Israel">Israel</option>
+                                    <option value="Italy">Italy</option>
+                                    <option value="Jamaica">Jamaica</option>
+                                    <option value="Japan">Japan</option>
+                                    <option value="Jersey">Jersey</option>
+                                    <option value="Johnston Island">Johnston Island</option>
+                                    <option value="Jordan">Jordan</option>
+                                    <option value="Kazakhstan">Kazakhstan</option>
+                                    <option value="Kenya">Kenya</option>
+                                    <option value="Kiribati">Kiribati</option>
+                                    <option value="Korea Demos Peoples Rep of">Korea Demos Peoples Rep of</option>
+                                    <option value="Korea Republic">Korea Republic</option>
+                                    <option value="Kuwait">Kuwait</option>
+                                    <option value="Kyrgyzstan">Kyrgyzstan</option>
+                                    <option value="Lao People's Democratic Republic">Lao People's Democratic Republic</option>
+                                    <option value="Latvia">Latvia</option>
+                                    <option value="Lebanon">Lebanon</option>
+                                    <option value="Lesotho">Lesotho</option>
+                                    <option value="Liberia">Liberia</option>
+                                    <option value="Libyan Arab Jamahiriya">Libyan Arab Jamahiriya</option>
+                                    <option value="Liechtenstein">Liechtenstein</option>
+                                    <option value="Lithuania">Lithuania</option>
+                                    <option value="Luxembourg">Luxembourg</option>
+                                    <option value="Macao">Macao</option>
+                                    <option value="Macedonia">Macedonia</option>
+                                    <option value="Madagascar">Madagascar</option>
+                                    <option value="Malawi">Malawi</option>
+                                    <option value="Malaysia">Malaysia</option>
+                                    <option value="Maldives">Maldives</option>
+                                    <option value="Mali">Mali</option>
+                                    <option value="Malta">Malta</option>
+                                    <option value="Marshall Islands">Marshall Islands</option>
+                                    <option value="Martinique">Martinique</option>
+                                    <option value="Mauritania">Mauritania</option>
+                                    <option value="Mauritius">Mauritius</option>
+                                    <option value="Mayotte">Mayotte</option>
+                                    <option value="Mexico">Mexico</option>
+                                    <option value="Micronesia">Micronesia</option>
+                                    <option value="Midway Islands">Midway Islands</option>
+                                    <option value="Moldova">Moldova</option>
+                                    <option value="Monaco">Monaco</option>
+                                    <option value="Mongolia">Mongolia</option>
+                                    <option value="Montenegro">Montenegro</option>
+                                    <option value="Montserrat">Montserrat</option>
+                                    <option value="Morocco">Morocco</option>
+                                    <option value="Mozambique">Mozambique</option>
+                                    <option value="Myanmar">Myanmar</option>
+                                    <option value="Namibia">Namibia</option>
+                                    <option value="Nauru">Nauru</option>
+                                    <option value="Nepal">Nepal</option>
+                                    <option value="Netherlands">Netherlands</option>
+                                    <option value="Netherlands Antilles">Netherlands Antilles</option>
+                                    <option value="Neutral Zone">Neutral Zone</option>
+                                    <option value="New Caledonia">New Caledonia</option>
+                                    <option value="New Zealand">New Zealand</option>
+                                    <option value="Nicaragua">Nicaragua</option>
+                                    <option value="Niger">Niger</option>
+                                    <option value="Nigeria">Nigeria</option>
+                                    <option value="Niue">Niue</option>
+                                    <option value="Norfolk Island">Norfolk Island</option>
+                                    <option value="Northern Mariana Islands">Northern Mariana Islands</option>
+                                    <option value="Norway">Norway</option>
+                                    <option value="Oman">Oman</option>
+                                    <option value="Pacific Islands">Pacific Islands</option>
+                                    <option value="Pakistan">Pakistan</option>
+                                    <option value="Palau">Palau</option>
+                                    <option value="Palestinian Territory">Palestinian Territory</option>
+                                    <option value="Panama">Panama</option>
+                                    <option value="Panama Canal Zone">Panama Canal Zone</option>
+                                    <option value="Papua New Guinea">Papua New Guinea</option>
+                                    <option value="Paraguay">Paraguay</option>
+                                    <option value="Peru">Peru</option>
+                                    <option value="Philippines">Philippines</option>
+                                    <option value="Pitcairn">Pitcairn</option>
+                                    <option value="Poland">Poland</option>
+                                    <option value="Portugal">Portugal</option>
+                                    <option value="Puerto Rico">Puerto Rico</option>
+                                    <option value="Qatar">Qatar</option>
+                                    <option value="Reunion">Reunion</option>
+                                    <option value="Romania">Romania</option>
+                                    <option value="Russian Federation">Russian Federation</option>
+                                    <option value="Rwanda">Rwanda</option>
+                                    <option value="Saint Barthelemy">Saint Barthelemy</option>
+                                    <option value="Saint Helena, Ascension and Tristan da Cunha">Saint Helena, Ascension and Tristan da Cunha</option>
+                                    <option value="Saint Kitts and Nevis">Saint Kitts and Nevis</option>
+                                    <option value="Saint Lucia">Saint Lucia</option>
+                                    <option value="Saint Martin">Saint Martin</option>
+                                    <option value="Saint Pierre and Miquelon">Saint Pierre and Miquelon</option>
+                                    <option value="St Vincent and the Grenadines">St Vincent and the Grenadines</option>
+                                    <option value="Samoa">Samoa</option>
+                                    <option value="San Marino">San Marino</option>
+                                    <option value="Sao Tome and Principe">Sao Tome and Principe</option>
+                                    <option value="Saudi Arabia">Saudi Arabia</option>
+                                    <option value="Senegal">Senegal</option>
+                                    <option value="Serbia">Serbia</option>
+                                    <option value="Seychelles">Seychelles</option>
+                                    <option value="Sierra Leone">Sierra Leone</option>
+                                    <option value="Sikkim">Sikkim</option>
+                                    <option value="Singapore">Singapore</option>
+                                    <option value="Sint Maarten">Sint Maarten</option>
+                                    <option value="Slovakia">Slovakia</option>
+                                    <option value="Slovenia">Slovenia</option>
+                                    <option value="Solomon Islands">Solomon Islands</option>
+                                    <option value="Somalia">Somalia</option>
+                                    <option value="South Africa">South Africa</option>
+                                    <option value="South Georgia and the South Sandwich Islands">South Georgia and the South Sandwich Islands</option>
+                                    <option value="South Sudan">South Sudan</option>
+                                    <option value="Spain">Spain</option>
+                                    <option value="Sri Lanka">Sri Lanka</option>
+                                    <option value="Sudan">Sudan</option>
+                                    <option value="Suriname">Suriname</option>
+                                    <option value="Svalbard and Jan Mayen">Svalbard and Jan Mayen</option>
+                                    <option value="Swaziland">Swaziland</option>
+                                    <option value="Sweden">Sweden</option>
+                                    <option value="Switzerland">Switzerland</option>
+                                    <option value="Syrian Arab Republic">Syrian Arab Republic</option>
+                                    <option value="Taiwan">Taiwan</option>
+                                    <option value="Tajikistan">Tajikistan</option>
+                                    <option value="Tanzania">Tanzania</option>
+                                    <option value="Thailand">Thailand</option>
+                                    <option value="Timor Leste">Timor Leste</option>
+                                    <option value="Togo">Togo</option>
+                                    <option value="Tokelau">Tokelau</option>
+                                    <option value="Tonga">Tonga</option>
+                                    <option value="Trinidad and Tobago">Trinidad and Tobago</option>
+                                    <option value="Tunisia">Tunisia</option>
+                                    <option value="Turkey">Turkey</option>
+                                    <option value="Turkmenistan">Turkmenistan</option>
+                                    <option value="Turks and Caicos Islands">Turks and Caicos Islands</option>
+                                    <option value="Tuvalu">Tuvalu</option>
+                                    <option value="Uganda">Uganda</option>
+                                    <option value="Ukraine">Ukraine</option>
+                                    <option value="United Arab Emirates">United Arab Emirates</option>
+                                    <option value="United Kingdom" selected="">United Kingdom</option>
+                                    <option value="US Outlying Islands">US Outlying Islands</option>
+                                    <option value="US Pacific Islands">US Pacific Islands</option>
+                                    <option value="United States">United States</option>
+                                    <option value="Uruguay">Uruguay</option>
+                                    <option value="Uzbekistan">Uzbekistan</option>
+                                    <option value="Vanuatu">Vanuatu</option>
+                                    <option value="Venezuela">Venezuela</option>
+                                    <option value="Vietnam">Vietnam</option>
+                                    <option value="Virgin Islands British">Virgin Islands British</option>
+                                    <option value="Virgin Islands US">Virgin Islands US</option>
+                                    <option value="Wake Island">Wake Island</option>
+                                    <option value="Wallis and Futuna">Wallis and Futuna</option>
+                                    <option value="Western Sahara">Western Sahara</option>
+                                    <option value="Yemen">Yemen</option>
+                                    <option value="Zambia">Zambia</option>
+                                    <option value="Zimbabwe">Zimbabwe</option>
+                                    <option value="Unknown">Unknown</option>
+                                </select>
+                                <input type="hidden" name="member-address-lookup-country" id="member-address-lookup-country" value="" autocomplete="country">
+                            </div>
+                            <p id="search-address-link" class="form-group js-only no-search-address-link" style="display: none;">
+                                <a href="#" data-track-click="{&quot;type&quot;: &quot;click&quot;, &quot;label&quot;: &quot;Search by postcode&quot;}">Search by postcode</a>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <label for="member-email" style="margin: 0;">Email</label>
+                        <input type="email" id="member-email" title="Email address" value="" name="member-email" data-parsley-required-message="Enter your email address." data-parsley-type-message="Check your email is correct - it must be a valid email address." required="" autocomplete="email">
+                    </div>
+                    <div class="form-row">
+                        <label for="member-confirm-email"  style="margin: 0;">Confirm email</label>
+                        <input type="email" id="member-confirm-email" title="Confirm email" name="member-confirm-email" value="" data-parsley-required-message="Confirm your email address." data-parsley-type-message="Confirm your email address." data-parsley-equalto="#member-email" data-parsley-equalto-message="Check your email confirmation - it must match your email." required="" autocomplete="email">
+                    </div>
+                    <div class="form-row">
+                        <label for="member-password"  style="margin: 0;">Create password</label>
+                        <span id="pwdHint" class="form-row--note">Your password must be at least 8 characters long, and include uppercase, lowercase and numbers</span>
+                        <p class="member-registration-error-message__member-password-error errors__field-error-message--hidden"></p>
+                        <input id="member-password" name="member-password" title="Password" type="password" aria-describedby="pwdHint" data-parsley-minlength="8" data-parsley-minlength-message="Choose a different password - it must be at least 8 characters, and including a mix of numbers and upper and lower case letters." data-parsley-password="" data-parsley-required-message="Create your password." required="">
+                    </div>
+                    <div class="form-row">
+                        <label for="member-confirm-password" style="margin: 0;">Confirm password</label>
+                        <input type="password" id="member-confirm-password" name="member-confirm-password" data-parsley-password="" data-parsley-required-message="Confirm your password." data-parsley-equalto="#member-password" data-parsley-equalto-message="Check your password confirmation - it must match your password." required="">
+                    </div>
+
+                    <div class="form-row no-margin" id="marketing-preferences-block">
+                        <legend>Your marketing preferences</legend>
+
+
+                        <p>
+                            Being a Co‑op Member benefits you and your community. That's why we'd like to keep you up
+                            to date about Membership rewards, benefits and events for you and your community from the Co‑op and our
+                            family of businesses including Food, Electrical, Insurance, Legal Services and Funeralcare, as well as
+                            related Co‑operative banking services.
+                        </p>
+                    </div>
+
+                    <div class="form-row no-margin" id="terms-agreement">
+                        <p class="no-margin">
+                            By applying to become a member, I am agreeing to the
+                            <a href="https://www.coop.co.uk/terms/membership-terms-and-conditions/" id="terms-and-conditions" target="_blank" rel="noopener noreferrer" data-track-click="{&quot;type&quot;: &quot;click&quot;, &quot;label&quot;: &quot;Terms and conditions&quot;}">terms
+                                and conditions</a>
+                            <sup class="icon icon-open-new-tab"></sup>
+                            and
+                            <a href="https://www.coop.co.uk/terms/privacy-policy/" id="privacy-policy" target="_blank" rel="noopener noreferrer" data-track-click="{&quot;type&quot;: &quot;click&quot;, &quot;label&quot;: &quot;Privacy policy&quot;}">
+                                privacy policy</a>
+                            <sup class="icon icon-open-new-tab"></sup>.
+                            I am committed to the Society remaining a co‑operative and I support
+                            <a href="https://www.co-operative.coop/about-us/values" target="_blank" rel="noopener noreferrer" data-track-click="{&quot;type&quot;: &quot;click&quot;, &quot;label&quot;: &quot;Co-op values and principles&quot;}">
+                                Co‑op values and principles</a>
+                            <sup class="icon icon-open-new-tab"></sup>.
+                        </p>
+                    </div>
+
+                    <a href="create-member-payment" type="submit" id="register-button" aria-controls="errors-summary-aria" class="btn btn-primary create-account btn-spaced" data-track-click="{&quot;type&quot;: &quot;action&quot;, &quot;label&quot;: &quot;Continue&quot;}">
+                        Continue to payment
+                    </a>
+                </fieldset>
+            </form>
+        </div>
+
+    </div>
+</div>
