@@ -1,10 +1,10 @@
 # Jekyll config
 
 # Site settings
-title: Co-op Prototyping Kit
-description: Co-op Prototyping Kit
+title: Co-op Health Station
+description: Co-op Health Station Prototyping
 baseurl: ""
-url: "http://coop-prototyping-kit.heroku.com"
+url: "http://coop-health-station.heroku.com"
 
 # Build settings
 source: ./
