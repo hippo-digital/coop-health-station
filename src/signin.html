@@ -1,0 +1,61 @@
+---
+layout: default
+id: signin
+---
+<div class="wrap">
+    <div class="row">
+        <div class="simplified-sign-in-partial">
+            <noscript>
+                &lt;div class="all-8 xsmall-12 small-12 medium-8 large-8 xlarge-8 column"&gt;
+                &lt;h1 class="javascript-disabled__heading"&gt;JavaScript is disabled&lt;/h1&gt;
+                &lt;p&gt;You need JavaScript enabled in your browser&lt;/p&gt;
+                &lt;/div&gt;
+            </noscript>
+
+
+            <div class="no-js__sign-in  nosign-in all-8 xsmall-12 small-12 medium-8 large-8 xlarge-8 column">
+                <div class="simplified-sign-in-header">
+                    <h1>Sign up with your Co-op membership account</h1>
+                </div>
+
+                <form action="dashboard.html" role="form"  method="POST">
+                    <fieldset class="fieldset" id="sign-in-fields">
+                        <div class="form-row">
+                            <label for="member-email" style="margin: 0;">Email</label>
+
+                            <input arial-label="If you've forgotten your email then call 0800 023 4708." type="email" id="member-email" name="member-email" class="member-email" data-parsley-type-message="Check you've typed your email correctly - it must be a valid email address." data-parsley-required-message="Enter your email address." required="">
+                            <!--<p>-->
+                                <!--<a class="sign-in-with-different-email hide" href="#" data-track-click="{&quot;type&quot;: &quot;click&quot;, &quot;label&quot;: &quot;Sign in with a different email&quot;}">Sign in with a different email</a>-->
+                            <!--</p>-->
+
+                        </div>
+
+                        <div id="password-form-row" class="form-row">
+                            <label for="member-password" style="margin: 0;">Password</label>
+                            <input class="member-password-input" id="member-password" type="password" name="member-password" data-parsley-required-message="Enter your password." required="">
+                            <p>
+                                <a href="/forgot-password" id="forgotten-password-button" name="forgotten-password-button" data-track-click="{&quot;type&quot;: &quot;click&quot;, &quot;label&quot;: &quot;Forgotten password&quot;}">Forgotten password</a>
+                            </p>
+                        </div>
+                    </fieldset>
+
+                    <div class="form-row checkbox-pair">
+                        <input id="remember-me" class="checkbox-box" name="remember-me" type="checkbox" data-track-click="{&quot;type&quot;: &quot;click&quot;, &quot;label&quot;: &quot;Remember my email&quot;}" data-parsley-multiple="remember-me">
+                        <label for="remember-me" class="checkbox-label">Remember my email</label>
+                    </div>
+
+                    <div class="form-row">
+                        <a href="results.html" type="submit" class="btn btn-primary" name="sign-in" aria-controls="errors-summary-aria" data-track-click="{&quot;type&quot;: &quot;action&quot;, &quot;label&quot;: &quot;Sign in&quot;}">Sign up
+                        </a>
+                    </div>
+
+                    <div class="form-row sign-in__additional-information">
+                        <p class="sign-in__additional-information-forgotten" aria-hidden="true">If you've forgotten your email then
+                            call <a href="tel:+448000234708" data-track-click="{&quot;type&quot;: &quot;click&quot;, &quot;label&quot;: &quot;Contact phone number&quot;}">0800
+                                023 4708</a>.</p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

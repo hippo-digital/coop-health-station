@@ -16,27 +16,42 @@
     </a>
     <!-- /Logo -->
 
-    {% comment %}
-    <a href="/" class="identifier">Digital</a>
-    {% endcomment %}
+
+    <a href="/" class="identifier">Health Care</a>
+
     
-    {% comment %}
+
     <a href="#" class="mobile-menu-toggle">
         <span class="icon icon-menu"></span><span class="mobile-menu-text">Menu</span>
     </a>
-    {% endcomment %}
+
+    <div id="access_bar">
+        <div id="small_action_pod">
+            <ul>
+                <li>
+                    <a title="" href="/" class="default" target="_self">Sign out</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
 
 </header>
 <!-- /Header -->
 
+{% if page.tags == 'signedin' %}
 <!-- Primary Navigation -->
-<!-- <nav id="navigation" class="nav-primary">
+ <nav id="navigation" class="nav-primary">
     <div class="wrap">
 
         <ul>
-            <li><a{% if page.id == 'index' %} class="active"{% endif %} href="/">Home</a></li>
+            <li><a{% if page.id == 'results' %} class="active"{% endif %} href="results.html">Your Results</a></li>
+            <!--<li><a href="/">Sign out</a></li>-->
         </ul>
 
     </div>
-</nav> -->
+</nav>
 <!-- /Primary Navigation -->
+
+{% endif %}
+
