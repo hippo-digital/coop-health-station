@@ -24,17 +24,17 @@
     <a href="#" class="mobile-menu-toggle">
         <span class="icon icon-menu"></span><span class="mobile-menu-text">Menu</span>
     </a>
-
+    {% if page.tags == 'signedin' %}
     <div id="access_bar">
         <div id="small_action_pod">
             <ul>
                 <li>
-                    <a title="" href="/" class="default" target="_self">Sign out</a>
+                    <!--<a title="" href="/" class="default" target="_self">Sign out</a>-->
                 </li>
             </ul>
         </div>
     </div>
-
+    {% endif %}
 
 </header>
 <!-- /Header -->
