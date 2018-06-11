@@ -287,3 +287,53 @@ dl {
     width: 49%!important;
   }
 }
+
+.ads-text {
+  color: #6e6e6e;
+  text-decoration: underline;
+  font-size: 65%;
+  font-style: italic;
+  text-align: center;
+  display: block;
+  margin: 8px 0 0 0;
+  border-bottom: none;
+}
+
+.cf, .carbon-wrap {
+  zoom: 1;
+}
+.carbon-wrap {
+   display: block;
+   background: #f1f1f1;
+   padding: 15px 15px 10px 15px;
+  @include clearfix;
+ }
+
+.carbon-wrap a {
+  display: block;
+  text-decoration: none;
+  border-bottom: none;
+}
+.carbon-text {
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  font-size: 14.079999923706055px;
+  font-style: normal;
+  font-weight: bold;
+  min-width: 120px;
+  color: #06c;
+}
+
+.carbon-img {
+   float: left;
+   margin-right: 10px;
+ }
+
+.carbon-poweredby {
+  color: #6e6e6e;
+  text-decoration: underline;
+  font-size: 65%;
+  font-style: italic;
+  text-align: center;
+  display: block;
+  margin: 8px 0 0 0;
+}
